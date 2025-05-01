@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Laporan Keuangan";
+}
+
+<div class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Laporan Keuangan</h2>
+    
+    <div class="bg-white rounded shadow-md p-4">
+        <div class="mb-4">
+            <p class="text-lg font-semibold">Total Pendapatan:</p>
+            <p class="text-green-600 text-xl">@ViewBag.TotalIncome.ToString("C", CultureInfo.GetCultureInfo("id-ID"))</p>
+        </div>
+        
+        <div class="mb-4">
+            <p class="text-lg font-semibold">Total Pengeluaran:</p>
+            <p class="text-red-600 text-xl">@ViewBag.TotalExpense.ToString("C", CultureInfo.GetCultureInfo("id-ID"))</p>
+        </div>
+        
+        <div>
+            <p class="text-lg font-semibold">Sisa Saldo:</p>
+            <p class="text-blue-700 text-xl">@ViewBag.Balance.ToString("C", CultureInfo.GetCultureInfo("id-ID"))</p>
+        </div>
+    </div>
+</div>
